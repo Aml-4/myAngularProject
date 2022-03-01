@@ -1,3 +1,5 @@
 export enum  DiscountOffers  {
-"No Discount", "10%", "15%"
+    NoDiscount = 'No Discount',
+    d1 = '10%',
+    d2 = '15%'
 } 
