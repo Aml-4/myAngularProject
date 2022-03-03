@@ -1,6 +1,7 @@
 import { IProduct,ICategory }from './../Shared Classes and Types/Interfaces';
 import { Component, OnInit } from '@angular/core';
 import { DiscountOffers } from '../Shared Classes and Types/Enums';
+import { ProductServiceService } from '../Services/product-service.service';
 
 @Component({
   selector: 'app-products',
@@ -9,7 +10,7 @@ import { DiscountOffers } from '../Shared Classes and Types/Enums';
 })
 export class ProductsComponent implements OnInit {
 
-    constructor() {
+    constructor(private prodcutService:ProductServiceService) {
     this.Discount = DiscountOffers.d1;
     this.StoreName = "Amal Store";
     this.StoreLogo = "assets/MyImages/265449038_1849585755226133_2272281998177102344_n.jpg";
@@ -56,8 +57,18 @@ export class ProductsComponent implements OnInit {
 
  ispurchasing() {
     this.IsPurshased=!this.IsPurshased;
+ }
+  // lab 3
+  prodcutList: any;
+  renderValues() {
+    return this.prodcutList = this.prodcutService.GetAllProducts();
   }
+  
+  productlist: any = [];
+  productId: any;
   ngOnInit(): void {
+    this.productlist = this.prodcutService.GetAllProducts();
+    this.productId = this.prodcutService.GetProductById(4);
   }
 
 }

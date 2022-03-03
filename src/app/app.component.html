@@ -1,3 +1,41 @@
-<app-header></app-header>
+<!-- <app-header></app-header>
 <app-products></app-products>
-<app-footer></app-footer>
+<app-footer></app-footer> -->
+
+<app-products></app-products>
+<br/>
+<button (click)="ShowProducts()"> Display Products</button>
+<br/>
+<div *ngIf="flag  then hidetable"></div>
+<ng-template #hidetable>
+
+    <table>
+        <thead>
+
+            <th class="col">ID</th>
+            <th class="col">Name</th>
+            <th width="50px" class="col">Quantity</th>
+            <th width="50px" class="col">Price</th>
+            <th class="col">Img</th>
+
+            </thead>
+            <tbody>
+            <tr *ngFor="let item of _Product">
+                <td> {{item.ID}}</td>
+                <td width="150px"> {{item.Name}}</td>
+                <td width="50px"> {{item.Quantity}}</td>
+                <td> {{item.Price}}</td>
+                
+                
+
+            </tr>
+            </tbody>
+    </table>
+</ng-template>
+
+<!-- <tr *ngFor="let item of _Product">
+    <td width="50px"> {{item.ID}}</td><br/>
+    <td width="150px"> {{item.Name}}</td>
+    <td width="50px"> {{item.Quantity}}</td>
+    <td> {{item.Price}}</td>
+</tr> -->
