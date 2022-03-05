@@ -11,5 +11,5 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-myimage:string="assets/MyImages/265449038_1849585755226133_2272281998177102344_n.jpg"
+// myimage:string="assets/MyImages/265449038_1849585755226133_2272281998177102344_n.jpg"
 }

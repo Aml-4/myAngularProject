@@ -1,4 +1,32 @@
-<p>products works!</p>
+<!-- lab4 -->
+
+
+<table  class="table">
+<thead>
+    <th scope="col" >ID</th>
+    <th scope="col" >Name</th>
+    <th scope="col" >Quantity</th>
+    <th scope="col" >Price</th>
+    <th scope="col" style="text-align: center;" >Img</th>
+</thead>
+<tbody>
+    <tr *ngFor="let item of ProductList">
+        <td> {{item.ID}}</td>
+        <td > {{item.Name}}</td>
+        <td> {{item.Quantity}}</td>
+        <td> {{item.Price}}</td>
+        <td width="100px" >
+            <img src="{{item.Img}}" height="150" width="200" />
+        </td>
+
+    </tr>
+</tbody>
+</table>
+
+
+<!-- end of lab4 -->
+
+<!-- <p>products works!</p>
 <h1>
     {{StoreName |uppercase}}
 </h1>
@@ -9,12 +37,12 @@
         
     </h3>
     {{1| percent}}
-    <br/>
+    <br/> -->
     <!-- <h3>
         {{"We offer an explicit discount of " + Discount}}
     </h3> -->
 ---------------------------------------------------------------
-    <br />
+    <!-- <br />
 <br />
 <br />
 
@@ -25,12 +53,12 @@
     </select>
     <br/>
 <br/>
-<br />
+<br /> -->
 
----------------------------------------------------------------
+<!-- ---------------------------------------------------------------
 <br/>
 <br />
-<br />
+<br /> -->
 
 <!-- <button (click)="ispurchasing()"> Buy Now </button>
 <br/>
@@ -71,15 +99,15 @@
 </div>
     </ng-template> -->
 ----------------------------------------------------------- 
-<br />
+<!-- <br />
 <div style="font-size: large; background-color: rgb(205, 214, 212); width: 400px; height: 50px;">
 <input style="background-color:rgb(227, 223, 230)" [(ngModel)]="ClientName"/>
 <span style="font-size: large;">{{ClientName}}</span>
-</div>
----------------------------------------------------------------
-<!-- <div *ngFor="let item of productlist">
+</div> -->
+<!-----------------------------------------------------------------
+ <div *ngFor="let item of productlist">
     The Product Name is: {{item.Name}} , 
     The Product ID is:{{item.ID}}
 </div> -->
-{{"The Product Name :" + productId.Name + ", The Product Id :" + productId.ID}}
+<!-- {{"The Product Name :" + productId.Name + ", The Product Id :" + productId.ID}} -->
 <!-- <button (click)="renderValues()">Show All Products</button> -->
