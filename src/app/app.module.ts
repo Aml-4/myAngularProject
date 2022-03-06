@@ -12,6 +12,8 @@ import { UsersComponent } from './users/users.component';
 import { PostsComponent } from './posts/posts.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {HttpClientModule} from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,9 @@ import {HttpClientModule} from '@angular/common/http';
     HomeComponent,
     UsersComponent,
     PostsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@ import { IProduct,ICategory }from './../Shared Classes and Types/Interfaces';
 import { Component, OnInit } from '@angular/core';
 import { DiscountOffers } from '../Shared Classes and Types/Enums';
 import { ProductServiceService } from '../Services/product-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -10,7 +11,7 @@ import { ProductServiceService } from '../Services/product-service.service';
 })
 export class ProductsComponent implements OnInit {
 
-    constructor(private prodcutService:ProductServiceService) {
+    constructor(private prodcutService:ProductServiceService, private router:Router) {
     this.Discount = DiscountOffers.d1;
     this.StoreName = "Amal Store";
     this.StoreLogo = "assets/MyImages/265449038_1849585755226133_2272281998177102344_n.jpg";
@@ -70,5 +71,12 @@ export class ProductsComponent implements OnInit {
     this.productlist = this.prodcutService.GetAllProducts();
     this.productId = this.prodcutService.GetProductById(4);
   }
-
+  // lab5
+  navigate() {
+    this.router.navigate(["/products"]);
+  }
+  navigate2() {
+    this.router.navigate(["/products"]);
+  }
+  
 }
